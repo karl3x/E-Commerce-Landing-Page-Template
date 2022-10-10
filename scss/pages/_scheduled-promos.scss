@@ -1,0 +1,62 @@
+//SCHEDULED PROMOS SECTION
+.swiper{
+    top: -8rem;
+    width: 100%;
+    height: 60vh;
+
+    .swiper-wrapper{
+        .swiper-slide{
+            img{
+                @include img(100%, 100%);
+            }
+        }
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        @include div-settings(75px, 75px, white, 50%);
+        font-weight: 900;
+        color: $slider-arrow-color;
+        box-shadow: 0 0 8px $slider-arrow-color;
+        transform: scale(0.4);
+        transition: .1s ease-in-out;
+
+        &:hover{
+            opacity: 0.9;
+            transform: scale(0.8);
+        }
+    }
+    .swiper-pagination-bullet-active{
+        background: white;
+    }
+}
+
+//MEDIA QUERY (BREAKPOINTS)
+//MAX-WIDTH 600px
+@include phone-only(mobile-xsm){
+    .swiper{
+        .swiper-button-prev, .swiper-button-next{
+            &:hover{
+                transform: scale(0.4);
+            }
+        }
+    }
+}
+/*481 to 768px*/
+@include tablet-device(tablet-sm, tablet-md){
+    .swiper{
+        .swiper-button-prev, .swiper-button-next{
+            &:hover{
+                transform: scale(0.4);
+            }
+        }
+    }
+}
+@include small-screens(screen-sm, screen-md){
+    .swiper{
+        .swiper-button-prev, .swiper-button-next{
+            &:hover{
+                transform: scale(0.4);
+            }
+        }
+    }
+}

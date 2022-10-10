@@ -1,0 +1,140 @@
+//ADD-ONS
+@mixin content-center{
+    align-items: center;
+    justify-content: center;
+}
+@mixin content-end{
+    align-items: center;
+    justify-content: flex-end;
+}
+@mixin content-start{
+    align-items: center;
+    justify-content: flex-start;
+}
+@mixin content-space-evenly{
+    align-items: center;
+    justify-content: space-evenly;
+}
+@mixin content-space-between{
+    align-items: center;
+    justify-content: space-between;
+}
+
+//TEXT AND FONTS
+@mixin fonts($value, $color, $weight: normal){
+    font-size: $value;
+    font-weight: map-get($font-weights, $weight);
+    color: $color;
+}
+@mixin section-header-dsgn($value){
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: $value;
+}
+@mixin txt-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//POSITION
+@mixin position($position, $top: 0, $right: 0, $bottom: 0, $left: 0){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+
+}
+
+//FORMS
+@mixin input-settings($radius, $cursor){
+    outline: none;
+    border: none;
+    border-radius: $radius;
+    cursor: $cursor;
+}
+
+//IMAGES
+@mixin img($width, $height){
+    width: $width;
+    height: $height;
+    object-fit: cover;
+}
+
+//DISPLAY
+@mixin flex-center(){
+    display: flex;
+    @include content-center;
+}
+@mixin flex-end{
+    display: flex;
+    @include content-end;
+}
+@mixin flex-start{
+    display: flex;
+    @include content-start;
+}
+@mixin flex-space-evenly{
+    display: flex;
+    @include content-space-evenly;
+}
+@mixin flex-space-between{
+    display: flex;
+    @include content-space-between;
+}
+@mixin flex-column{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin grid-center{
+    display: grid;
+    @include content-center;
+}
+@mixin grid-start{
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+//DISPLAY SETTINGS
+@mixin nav-settings($width: 0, $height: 0){
+    top: 0;
+    left: 0;
+    width: $width;
+    height: $height;
+}
+@mixin flex-center-settings($direction, $position: none){
+    @include flex-center;
+    text-align: $position;
+    flex-direction: $direction;
+}
+@mixin flex-start-settings($direction, $position: none){
+    @include flex-start;
+    text-align: $position;
+    flex-direction: $direction;
+}
+@mixin flex-space-between-settings($direction, $position: none){
+    @include flex-space-between;
+    text-align: $position;
+    flex-direction: $direction;
+}
+@mixin grid-settings($gap){
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gap;
+}
+@mixin grid-settings2($col-gap, $row-gap){
+    @include content-start;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-auto-rows: minmax(1fr, auto);
+    column-gap: $col-gap;
+    row-gap: $row-gap;
+}
+@mixin div-settings($width, $height, $bg-color, $border-radius){
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+}

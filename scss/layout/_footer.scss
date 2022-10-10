@@ -1,0 +1,198 @@
+footer{
+    @include div-settings(100%, 265px, $footer-bg-color, none);
+    margin-top: 2rem;
+
+    #footer-contents{
+        display:  flex;
+        padding-left: 1rem;
+
+        #payments-container{
+            margin: 20px;
+
+            h2{
+                @include fonts(2rem, black, bold);
+                font-family: $Poppins;
+                margin-bottom: 8px;
+                letter-spacing: 1.2px;
+            }
+            .payments-img-container{
+                @include grid-start;
+                grid-template-columns: repeat(2, auto);
+                gap: 10px;
+        
+                img{
+                    width: 65px;
+                    height: 40px;
+                    box-shadow: 0 4px 2px -2px #929292;
+                }
+            }
+        }
+        #socials-container{
+            margin: 20px;
+
+            h2{
+                @include fonts(2rem, black, bold);
+                font-family: $Poppins;
+                margin: 0 0 8px 30px;
+                letter-spacing: 1.2px;
+            }
+
+            .socials-href-container{
+                @include grid-start;
+                grid-template-columns: repeat(1, auto);
+                gap: 10px;
+                margin-left: 30px;
+
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &:hover span{
+                        opacity: 0.9;
+                        color: $main-color;
+                    }
+
+                    i{
+                        @include fonts(1.5rem, $socials-color, bold);
+                    }
+
+                    span{
+                        @include fonts(1.5rem, $socials-color, medium);
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .custom-hr{
+        @include footer-custom-hr;
+        margin: 2.5rem 0;
+    }
+    .img-reference{
+        @include fonts(1.5rem, black, medium);
+        padding-left: 20px;
+
+        a{
+            padding-left: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+//MEDIA QUERY (BREAKPOINTS)
+//MAX-WIDTH 600px
+@include phone-only(mobile-xsm){
+    footer{
+        height: 240px;
+        #footer-contents{
+            padding: 0;
+
+            #payments-container{
+                h2{
+                    font-size: 1.5rem;
+                }
+                .payments-img-container{
+                    img{
+                        width: 50px;
+                        height: 30px;
+                    }
+                }
+            }
+            #socials-container{
+                h2{
+                    font-size: 1.5rem
+                }
+                .socials-href-container{    
+                    a{
+                        i{
+                            font-size: 1.25rem;
+                        }
+    
+                        span{
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*481 to 768px*/
+@include tablet-device(tablet-sm, tablet-md){
+    footer{
+        height: 250px;
+        #footer-contents{
+            padding: 0;
+
+            #payments-container{
+                h2{
+                    font-size: 1.75rem;
+                }
+                .payments-img-container{
+                    img{
+                        width: 60px;
+                        height: 35px;
+                    }
+                }
+            }
+            #socials-container{
+                h2{
+                    font-size: 1.75rem
+                }
+                .socials-href-container{    
+                    a{
+                        i{
+                            font-size: 1.5rem;
+                        }
+    
+                        span{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include small-screens(screen-sm, screen-md){
+    footer{
+        height: 250px;
+        #footer-contents{
+            padding: 0;
+
+            #payments-container{
+                h2{
+                    font-size: 1.75rem;
+                }
+                .payments-img-container{
+                    img{
+                        width: 60px;
+                        height: 35px;
+                    }
+                }
+            }
+            #socials-container{
+                h2{
+                    font-size: 1.75rem
+                }
+                .socials-href-container{    
+                    a{
+                        i{
+                            font-size: 1.5rem;
+                        }
+    
+                        span{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

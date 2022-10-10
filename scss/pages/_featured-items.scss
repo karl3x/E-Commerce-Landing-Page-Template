@@ -1,0 +1,184 @@
+#featured-items-section{
+    @include div-settings(95%, 100%, #A2A2A2, 3px);
+    margin: 5rem auto 20px auto;
+
+    h2{
+        @include fonts(4rem, white, bold);
+        display: none;
+        letter-spacing: 1.2px;
+        font-family: $Poppins;
+    }
+
+    //CONTAINER OF IMG
+    .featured-items-container{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: auto 1fr;
+
+        figure{
+            @include img(415px, 450px);
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        //THE PRODUCT ITSELF
+        .featured-products-container{
+            @include div-settings(98.5%, 98%, white, 3px);
+            @include grid-settings(2px);
+            margin: auto;
+            overflow-x: hidden;
+            overscroll-behavior-inline: contain;
+            scroll-behavior: smooth;
+
+            .featured-products:last-of-type{
+                border-right: none;
+            }
+            .featured-products{
+                border-right: 1px solid #CCC;
+                width: 100%;
+                height: 100%;
+                
+                a{
+                    img{
+                        @include img(250px, 250px);
+    
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                .featured-product-price{
+                    @include fonts(2.5rem, $main-color, bold);
+                    padding: 5px 10px;
+                    letter-spacing: 1px;
+                }
+                .featured-product-desc{
+                    @include fonts(1.5rem, black, medium);
+                    text-decoration: none;
+                    display: block;
+                    padding: 8px 10px 20px 10px;
+                    letter-spacing: 1.2px;
+                    line-height: 1.4;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+    //SCROLL-X EFFECTS
+    .snaps-inline{
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 2.25rem;
+    }
+    .snaps-inline > *{
+        scroll-snap-align: start;
+    }
+    //BUTTONS USED FOR SCROLLING
+    .horizontal-scroll{
+        @include flex-space-between-settings(row);
+        @include position(relative, 22rem);
+        margin-bottom: -25px;
+
+        .btn-scroll{
+            @include btn-x-scroll;
+            transform: scale(1);
+            transition: .1s ease-in-out;
+
+            &:hover{
+                opacity: 0.9;
+                transform: scale(2);
+            }
+        }
+    }
+    #featured-items-scroll-left{
+        @include position(relative, 0, 0, 0, 41rem);
+        visibility: hidden;
+    }
+    #featured-items-scroll-right{
+        @include position(relative, 0, 0, 0, 14px);
+    }
+}
+//MEDIA QUERY (BREAKPOINTS)
+//MAX-WIDTH 600px
+@include phone-only(mobile-xsm){
+    #featured-items-section{
+        h2{
+            display: block;
+            font-size: 2.5rem;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .featured-items-container{
+            margin-top: 20px;
+
+            figure{
+                display: none;
+            }
+            .featured-products-container{
+                overflow-x: auto;
+            }
+        }
+    }
+    .horizontal-scroll{
+        .btn-scroll{
+            display: none;
+        }
+    }
+}
+/*481 to 768px*/
+@include tablet-device(tablet-sm, tablet-md){
+    #featured-items-section{
+        .featured-items-container{
+            margin-top: 25px;
+            figure{
+                @include img(315px, 350px);
+            }
+            .featured-products-container{
+                overflow-x: auto;
+
+                .featured-products{             
+                    a{
+                        img{
+                            @include img(200px, 175px);
+        
+                            &:hover{
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                    .featured-product-price{
+                        font-size: 1.75rem;
+                    }
+                    .featured-product-desc{
+                        font-size: 1.25rem;
+                    }
+                }
+            }        
+        }
+    }
+    .horizontal-scroll{
+        .btn-scroll{
+            display: none;
+        }
+    }
+}
+@include small-screens(screen-sm, screen-md){
+    #featured-items-section{
+        .featured-items-container{
+            .featured-products-container{
+                overflow-x: auto;
+            }        
+        }
+    }
+    .horizontal-scroll{
+        .btn-scroll{
+            display: none;
+        }
+    }
+}

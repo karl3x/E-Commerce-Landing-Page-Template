@@ -1,0 +1,24 @@
+//base
+@import "../scss/base/colors";
+@import "../scss/base/fonts";
+@import "../scss/base/mixins";
+@import "../scss/base/resets";
+@import "../scss/base/breakpoints";
+
+//components
+@import "../scss/components/shapes";
+@import "../scss/components/buttons";
+@import "../scss/components/customized-dsgn";
+
+//layout
+@import "../scss/layout/nav";
+@import "../scss/layout/footer";
+
+//page
+@import "../scss/pages/scheduled-promos";
+@import "../scss/pages/flash-deals";
+@import "../scss/pages/categories";
+@import "../scss/pages/featured-items";
+@import "../scss/pages/top-products";
+@import "../scss/pages/daily-discovery";
+@import "../scss/pages/cart";

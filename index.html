@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing Page of an E-Commerece">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link 
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" 
+    />
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <title>E-Commerece</title>
+</head>
+<body>
+    <!--START OF NAV-->
+    <nav id="nav-bar">
+        <div class="login-nav">
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
+        </div>
+        <div class="main-nav">
+            <a href="#">
+                <img 
+                    src="img/e-commerce-logo.png"
+                    class="logo-img"
+                    alt="Logo" 
+                    loading="lazy"
+                />
+            </a>
+            <form>
+                <div class="search-bar-container">
+                    <input type="text" id="search-bar" name="search" placeholder="Search...">
+                    <button type="button" id="search-btn"><i class="fas fa-search" id="search-btn-icon"></i></button>
+                </div>
+            </form>
+            <i class="fas fa-search" id="search-icon-res"></i>
+            <a href="cart.html" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-shopping-cart" id="cart-icon"></i>
+            </a>
+        </div>
+
+        <!--RESPONSIVE DESIGN FOR SEARCH BAR (res = responsive)-->
+        <form>
+            <div class="search-bar-res-container" id="search-bar-res-container">
+                <div class="search-bar-res-content">
+                    <input type="text" name="search" placeholder="Search...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+
+        <!--POP-UP CONTAINER-->
+        <div class="cart-container" id="cart-container">
+            <div class="cart-content">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <form>
+                    <button type="button">Shop our products</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--END OF NAV-->
+
+
+    
+    <!--START OF MAIN CONTENT-->
+    <main>
+
+        <!------------------------FIRST SECTION------------------------>
+
+        <!--START OF SCHEDULED PROMOS SECTION-->
+        <section id="scheduled-promos-section">
+
+            <!-- Slider main container -->
+            <div class="swiper">
+
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <a 
+                            href="#https://www.deviantart.com/timawanabe?fbclid=IwAR0BJWrrptZjGfw1ETrb3E7m20J-kvewYnZn16XPOshoj6hmwQjWZUQjeWk"
+                            target="_blank"
+                        >
+                            <img 
+                                src="img/sample-1.png"
+                                alt="Promo"
+                                loading="lazy"                            
+                            />
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img 
+                                src="img/promo-2.png"
+                                alt="Promo"
+                                loading="lazy"                            
+                            />
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img 
+                                src="img/promo-2.png"
+                                alt="Promo"
+                                loading="lazy"                            
+                            />
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img 
+                                src="img/promo-2.png"
+                                alt="Promo"
+                                loading="lazy"                            
+                            />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+  
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <!--END OF SCHEDULED PROMOS SECTION-->
+
+
+        <!------------------------SECOND SECTION------------------------>
+
+        <!--START OF FLASH DEALS SECTION-->
+        <section id="flash-deals-section">
+            
+            <!--FLASH DEALS HEADER-->
+            <div class="flash-deals-container">
+                <h2 id="flash-deals-header">FLASH DEALS</h2>
+                <p id="sale-ends"></p>
+                
+                <span id="days"></span>
+                <span id="hours"></span>
+                <span id="mins"></span>
+
+                <a  
+                    href="#"
+                    class="btn btn-see-all"
+                    target="_blank"
+                    >See all<i class="fas fa-chevron-right" id="btn-icon"></i>
+                </a>
+            </div>
+
+
+            <!--CUSTOMIZED HR-->
+            <div class="custom-hr"></div>
+
+
+            <!--FLASH DEALS HORIZONTAL BUTTON SCROLL-->
+            <div class="horizontal-scroll">
+                <button class="btn-scroll" id="flash-scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn-scroll" id="flash-scroll-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+
+            <!--PRODUCTS CONTAINER-->
+            <div class="flash-deals-product-container snaps-inline">
+                
+                <!--ITEMS-->
+                <!----------ITEM#1------------>
+                <div class="products-deal">
+                    <img src="img/sample-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#2------------>
+                <div class="products-deal">
+                    <img src="img/sample-3.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#3------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#4------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#5------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#6------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#7------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#8------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#9------------>
+                <div class="products-deal">
+                    <img src="img/sample-3.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#10------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#11------------>
+                <div class="products-deal">
+                    <img src="img/sample-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+
+                <!----------ITEM#12------------>
+                <div class="products-deal">
+                    <img src="img/product-2.png" alt="Product IMG" loading="lazy"/>
+                    <p class="title">Product Name</p>
+                    <p class="current-price">&#8369;337</p>
+                    <ul>
+                        <li><p class="sale-price">&#8369;6535</p></li>
+                        <li><p class="sales-off">-95%</p></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--END OF FLASH DEALS SECTION-->
+
+
+        <!------------------------THIRD SECTION------------------------>
+
+        <!--START OF CATEGORY SECTION-->
+        <section id="categories-section">
+
+
+            <!--SECTION TITLE-->
+            <h2 id="categories-header">CATEGORIES</h2>
+
+
+            <!--CUSTOMIZED HR-->
+            <div class="custom-hr"></div>
+
+            <!--CATEGORY HORIZONTAL BUTTON SCROLL-->
+            <div class="horizontal-scroll">
+                <button class="btn-scroll" id="category-scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn-scroll" id="category-scroll-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <!--CATEGORIES PAGES-->
+            <div class="categories-pg-container snaps-inline">
+
+                <!--PAGE 1-->
+                <div class="categories-pg" id="category-pg-1">
+
+                    <!--CATEGORIES ON PAGE 1-->
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>    
+                </div>
+
+                <!--PAGE 2-->
+                <div class="categories-pg" id="category-pg-2">
+
+                    <!--CATEGORIES ON PAGE 1-->
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>
+
+                    <div class="categories">
+                        <a href="#" target="_self">
+                            <img src="img/category.png" alt="Category Img" loading="lazy"/>
+                            <p class="category-name">Category Name</p>
+                        </a> 
+                    </div>    
+                </div>
+            </div>
+        </section>
+        <!--END OF CATEGORY SECTION-->
+
+        
+
+        <!------------------------FOURTH SECTION------------------------>
+
+        <!--START OF FEATURED ITEMS SECTION-->
+        <section id="featured-items-section">
+            
+            <h2>FEATURED ITEMS</h2>
+
+            <!--FEATURED ITEMS HORIZONTAL BUTTON SCROLL-->
+            <div class="horizontal-scroll">
+                <button class="btn-scroll" id="featured-items-scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn-scroll" id="featured-items-scroll-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+
+            <!--FEATURED ITEMS CONTAINER-->
+            <div class="featured-items-container">
+
+                
+                <!--FEATURED ITEMS FIGURE CONTAINER-->
+                <figure>
+                    <img 
+                        src="img/featured-items-1.png"
+                        alt="Featured Item IMG"
+                        loading="lazy"
+                    />
+                </figure>
+
+                <!--FEATURED PRODUCTS CONTAINER-->
+                <div class="featured-products-container snaps-inline">
+                    
+                    <!--FEATURED PRODUCTS-->
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;999</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;720</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;2400</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;19000</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;270</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;12000</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;500</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;322</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;25000</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;650</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;1290</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;888</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;3222</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+
+                    <div class="featured-products">
+                        <a href="#" target="_self">
+                            <img
+                                src="img/featured-products-1.png"
+                                alt="Featured Products IMG"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="featured-product-price">&#8369;644</p>
+                        <a href="#" target="_self" class="featured-product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END OF FEATURED ITEMS SECTION-->
+        
+        
+        
+        <!------------------------FIFTH SECTION------------------------>
+
+        <!--START OF TOP PRODUCTS SECTION-->
+        <header id="top-products-header">
+            <h1>TOP PRODUCTS</h1>
+        </header>
+
+        <section id="top-products-section">
+            <div class="top-products-container">
+
+                <!--TOP PRODUCTS MAIN (THE LARGE ONE)-->
+                <div class="top-products-main" id="top-products-main">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/sample-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+
+                <!--TOP PRODUCTS-->
+                <div class="top-products" id="top-products-1">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/sample-3.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+                <div class="top-products" id="top-products-2">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/product-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+                <div class="top-products" id="top-products-3">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/product-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+                <div class="top-products" id="top-products-4">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/product-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+                <div class="top-products" id="top-products-5">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/product-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+                <div class="top-products" id="top-products-6">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/product-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+                <div class="top-products" id="top-products-7">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/product-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+
+                <div class="top-products" id="top-products-8">
+                    <a href="#" target="_self">
+                        <img
+                            src="img/product-2.png"
+                            alt="Product Img"
+                            loading="lazy"
+                        />
+                    </a>
+                    <p>Product Name</p>
+                </div>
+            </div>
+        </section>
+        <!--END OF TOP PRODUCTS SECTION-->
+
+        
+        
+        <!------------------------SIXTH/LAST SECTION------------------------>
+
+        <!--START OF DAILY DISCOVERY SECTION-->
+        <header id="daily-discovery-header">
+            <h1>DAILY DISCOVERIES</h1>
+        </header>
+
+        <section id="daily-discovery-section">
+
+
+            <div class="daily-discovery-container">
+
+                <!--DAILY DISCOVERY PRODUCTS-->
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+
+                <div class="daily-discovery-products">
+                    <a href="#" target="_self">
+                        <img 
+                            src="img/product-2.png"
+                            alt="Product IMG"
+                            loading="lazy"
+                        />
+
+                        <!--dd stands for DAILY DISCOVERY.-->
+                        <p class="dd-product-name">Product Name</p>
+                        <p class="dd-current-price">&#8369;337</p>
+                        <ul>
+                            <li><p class="dd-sale-price">&#8369;6535</p></li>
+                            <li><p class="dd-sales-off">-95%</p></li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+
+            <!--SEE MORE BUTTON-->
+            <!--CLICKING IT WILL GO TO DIFFERENT TAB AND 
+                    SHOW ALL THE PRODUCTS-->
+            <a class="btn-see-more" href="#" target="_self">SEE MORE</a>
+        </section>
+        <!--END OF DAILY DISCOVERY SECTION-->
+
+    </main>
+    <!--END OF MAIN CONTENT-->
+
+
+
+    <!--START OF FOOTER-->
+    <footer>
+        <div id="footer-contents">
+
+            <!--PAYMENTS METHOD-->
+            <div id="payments-container">
+                <h2>PAYMENTS</h2>
+                <div class="payments-img-container">
+                    <img src="img/master.png" alt="Mastercard Logo" loading="lazy">
+                    <img src="img/visa.png" alt="Mastercard Logo" loading="lazy">
+                    <img src="img/paypal.png" alt="Mastercard Logo" loading="lazy">
+                </div>
+            </div>
+
+            <!--SOCIALS-->
+            <div id="socials-container">
+                <h2>FOLLOW US</h2>
+                <div class="socials-href-container">
+
+                    <!--FACEBOOK-->
+                    <a href="#" target="_self">
+                        <i class="fab fa-facebook"></i><span>Facebook</span>
+                    </a>
+
+                    <!--INSTAGRAM-->
+                    <a href="#" target="_self">
+                        <i class="fab fa-instagram"></i><span>Instagram</span>
+                    </a>
+
+                    <!--TWITTER-->
+                    <a href="#" target="_self">
+                        <i class="fab fa-twitter"></i><span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-hr"></div>
+        <p class="img-reference">Icons and fan art made by: 
+            <a href="https://www.deviantart.com/timawanabe?fbclid=IwAR0BJWrrptZjGfw1ETrb3E7m20J-kvewYnZn16XPOshoj6hmwQjWZUQjeWk" target="_blank">Timawanabe</a>
+        </p>
+    </footer>
+    <!--END OF FOOTER-->
+
+    <!--SCRIPTS-->
+    <script src="js/pop-up.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/img-slider.js"></script>
+    <script src="js/flash-deals-x-scroll.js"></script>
+    <script src="js/sale-countdown.js"></script>
+    <script src="js/category-x-scroll.js"></script>
+    <script src="js/featured-items-x-scroll.js"></script>
+    <script src="js/top-products-href.js"></script>
+    
+</body>
+</html>

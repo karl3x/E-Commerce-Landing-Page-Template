@@ -1,0 +1,310 @@
+//NAVIGATION BAR
+#nav-bar{
+    @include position(sticky);
+    width: 100%;
+    z-index: 5;
+
+    .login-nav{
+        @include flex-end;
+        @include nav-settings(100%, 30px);
+        padding: 0 1rem;
+        background-color: $nav-color2;
+
+        a{
+            @include fonts(1.5rem, $text-color);
+            letter-spacing: 1.2px;
+            margin: 0 8px;
+            text-decoration: none;
+
+            &:hover{
+                opacity: 0.8;
+            }
+            &:visited{
+                color: $text-color;
+            }
+        }
+    }
+    .main-nav{
+        @include flex-center;
+        @include nav-settings(100%, 100px);
+        background-color: $nav-color;
+        
+        .logo-img{
+            @include img(100px, 100px);
+            @include position(relative, 6px);
+            margin: 0 20px;
+        }
+        .search-bar-container{
+            display: inline-block;
+
+            #search-bar{
+                @include fonts(1.75rem, black);
+                @include input-settings(0, auto);
+                @include txt-overflow;
+                font-family: $Poppins;
+                letter-spacing: 1.2px;
+                width: 750px;
+                padding: 12px;
+
+                &:focus{
+                    border: 1.5px solid #45B6FE;
+                }
+            }
+            #search-btn{
+                @include input-settings(0, pointer);
+                @include position(relative, 0, 0, 0, -4px);
+                background-color: $main-color;
+                margin-right: 30px;
+                height: 50px;
+                width: 50px;
+    
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            #search-btn-icon{
+                @include fonts(1.75rem, $text-color, bold);
+            }
+        }
+        #cart-icon{
+            @include fonts(3rem, black, bold);
+            @include position(relative, 2px);
+            cursor: pointer;
+    
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        //ICON FOR RESPONSIVE SEARCH BAR
+        #search-icon-res{
+            @include fonts(3rem, black, bold);
+            @include position(relative, 2px);
+            display: none;
+            margin-right: 25px;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+//RESPONSIVE DESIGN FOR SEARCH BAR (res = responsive)
+.search-bar-res-container{
+    @include nav-settings(100%, 80px);
+    position: relative;
+    background-color: $nav-color;
+    transform: translateY(-100%);
+    transition: .3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+}
+.active-search-bar{
+    transform: translateY(0);
+    transition: .3s ease-in-out;
+    opacity: 1;
+}
+.search-bar-res-content{
+    display: none
+}
+
+//POP-UP CART CONTAINER
+.cart-container{
+    @include position(fixed, 115px, 0, 0, 1068px);
+    width: 420px;
+    height: 350px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.active{
+    opacity: 1;
+    transition: .3s ease-in-out;
+}
+.cart-container::before{
+    @include triangle(white);
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 358px;
+}
+
+//CART CONTAINER CONTENT
+.cart-content{
+   @include flex-center-settings(column, center);
+   
+   i{
+        @include fonts(10rem, $main-color, bold);
+        margin-top: 7rem;
+    }
+    p{
+        @include fonts(2rem, $main-color, normal);
+        padding: 3rem 0;
+    }
+    button{
+        @include input-settings(3px, pointer);
+        @include fonts(2rem, $text-color, normal);
+        @include position(relative, 20px);
+        font-family: $Monsterrat;
+        background-color: $main-color;
+        padding: 13px 0;
+        width: 250px;
+
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}
+
+//MEDIA QUERY (BREAKPOINTS)
+//MAX-WIDTH 600px
+@include phone-only(mobile-xsm){
+    #nav-bar{
+        .main-nav{
+            @include flex-space-evenly;
+
+            .logo-img{
+                left: -4.25rem;
+            }
+
+            //ORIGINAL SEARCH BAR
+            .search-bar-container{
+                display: none;
+            }
+            #search-icon-res{
+                display: block;
+                left: 25px;
+            }
+        }
+        //RESPONSIVE SEARCH BAR
+        .search-bar-res-content{
+            @include flex-center;
+        
+            input{
+                @include fonts(1.75rem, black);
+                @include input-settings(0, auto);
+                @include txt-overflow;
+                font-family: $Poppins;
+                letter-spacing: 1.2px;
+                width: 85%;
+                margin: 10px 3.5rem;
+                padding: 12px;
+
+                &:focus{
+                    border: 1.5px solid #45B6FE;
+                }
+            }
+            button{
+                @include input-settings(0, pointer);
+                @include position(relative, 0, 0, 0, -35px);
+                background-color: $main-color;
+                height: 50px;
+                width: 6rem;
+        
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            i{
+                @include fonts(1.75rem, $text-color, bold);
+            }
+        }
+    }
+
+    //POP-UP CART CONTAINER
+    .cart-container{
+        display: none;
+    }
+}
+
+/*481 to 768px*/
+@include tablet-device(tablet-sm, tablet-md){
+    #nav-bar{
+        .main-nav{
+            .logo-img{
+                left: -1.5rem;
+            }
+
+            .search-bar-container{
+                #search-bar{
+                    @include position(relative, 0, 0, 0, -2.25rem);
+                    width: 400px;
+                }
+                #search-btn{
+                    left: -2.55rem;
+                }
+            }
+            #cart-icon{
+                left: -2.75rem;
+            }
+        }
+    }
+
+    //POP-UP CART CONTAINER
+    .cart-container{
+        display: none;
+    }
+}
+/*769 to 1024px*/
+@include small-screens(screen-sm, screen-md){
+    #nav-bar{
+        .main-nav{
+            .logo-img{
+                left: -1.5rem;
+            }
+
+            .search-bar-container{
+                #search-bar{
+                    @include position(relative, 0, 0, 0, -2.25rem);
+                    width: 620px;
+                }
+                #search-btn{
+                    left: -2.55rem;
+                }
+            }
+            #cart-icon{
+                left: -2.75rem;
+            }
+        }
+    }
+    //POP-UP CART CONTAINER
+    .cart-container{
+        display: none;
+    }
+}
+/*1025 to 1270px*/
+@include desktop-screens(screen-l, screen-xl){
+    #nav-bar{
+        .main-nav{
+            .logo-img{
+                left: -1.5rem;
+            }
+
+            .search-bar-container{
+                #search-bar{
+                    @include position(relative, 0, 0, 0, -2.25rem);
+                    width: 750px;
+                }
+                #search-btn{
+                    left: -2.55rem;
+                }
+            }
+            #cart-icon{
+                left: -2.75rem;
+            }
+        }
+    }
+    //POP-UP CART CONTAINER
+    .cart-container{
+        display: none;
+    }
+}
+/*1271 to 1640*/
+@include desktop-screens(desktop-sm, desktop-md){
+    //POP-UP CART CONTAINER
+    .cart-container{
+        left: 749px;
+    }
+}

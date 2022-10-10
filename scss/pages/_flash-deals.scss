@@ -1,0 +1,260 @@
+//FLASH DEALS SECTION
+#flash-deals-section{
+    @include div-settings(95%, 100%, white, 3px);
+    margin: 0 auto 20px auto;
+    padding: 0 0 20px 0;
+    
+    //HEADER OF FLASH DEALS SECTOIN
+    .flash-deals-container{
+        @include flex-start;
+        padding: 20px;
+
+        #flash-deals-header{
+            @include fonts(4rem, $main-color, bold);
+            margin: 0 20px;
+            font-family: $Poppins;
+        }
+        #sale-ends{
+            @include fonts(3rem, #BE3144, bold);
+            display: none;
+            margin: 0 10px;
+            padding-top: 3.5px;
+            font-family: $Raleway
+        }
+        span{
+            @include fonts(2rem, white, bold);
+            @include div-settings(35px, 35px, black, 3px);
+            text-align: center;
+            padding: 3px 0;
+            margin: 0 12px;
+        }
+        .btn{
+            @include btn-see;
+            margin: 0 20px 0 auto;
+        }
+        #btn-icon{
+            padding-left: 2px;
+            font-size: 1.75rem;
+        }
+        .btn-see-all{
+            font-size: 2rem;
+            background: $main-color;
+            transition:  .3s ease-out;
+        
+            &:hover{
+                opacity: 0.8;
+            }
+            &:hover > i{
+                transform: translateX(5px);
+            }
+            & > i{
+                margin-left: 10px;
+                transform: translateX(0);
+                transition: .3s ease-out;
+            }
+        }
+    }
+    .custom-hr{
+        @include customized-hr;
+    }
+
+    //PRODUCTS IN FLASH DEALS SECTION
+    .flash-deals-product-container{
+        @include div-settings(100%, 100%, none, 0);
+        @include grid-settings(24px);
+        overflow-x: hidden;
+        overscroll-behavior-inline: contain;
+        scroll-behavior: smooth;
+        padding: 0 2rem 0 2rem;
+
+        .products-deal{
+            img{
+                @include img(200px, 200px);
+            }
+            .title{
+                @include fonts(1.5rem, black, bold);
+                letter-spacing: 1.2px;
+                font-family: $Poppins;
+                margin: 10px 0 0 4px;
+            }
+            .current-price{
+                @include fonts(2rem, $main-color, bold);
+                letter-spacing: 1.2px;
+                font-family: $Poppins;
+                margin-left: 3px;
+            }
+            ul{
+                list-style: none;
+
+                li{
+                    display: inline-block;
+                }
+
+                .sale-price{
+                    @include fonts(1.5rem, $sale-txt-color, normal);
+                    font-family: $Poppins;
+                    text-decoration: line-through;
+                    letter-spacing: 1.2px;
+                    margin-left: 3px;
+                }
+                .sales-off{
+                    @include fonts(1.25rem, black, normal);
+                    @include position(relative, -1px);
+                    letter-spacing: 1.2px;
+                    font-family: $Poppins;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    .snaps-inline{
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 2.25rem;
+    }
+    .snaps-inline > *{
+        scroll-snap-align: start;
+    }
+    .horizontal-scroll{
+        @include flex-space-between-settings(row);
+        @include position(relative, 13rem);
+
+        .btn-scroll{
+            @include btn-x-scroll;
+            transform: scale(1);
+            transition: .1s ease-in-out;
+
+            &:hover{
+                opacity: 0.9;
+                transform: scale(2);
+            }
+        }
+    }
+    #flash-scroll-left{
+        @include position(relative, 0, 0, 0, -15px);
+        visibility: hidden;
+    }
+    #flash-scroll-right{
+        @include position(relative, 0, 0, 0, 15px);
+    }
+}
+
+//MEDIA QUERY (BREAKPOINTS)
+//MAX-WIDTH 600px
+@include phone-only(mobile-xsm){
+    #flash-deals-section{
+        .flash-deals-container{
+            padding: 10px;
+
+            #flash-deals-header{
+                font-size: 2rem;
+                margin: 0 4px;
+            }
+            #sale-ends{
+                font-size: 2rem;
+                padding-top: 0;
+            }
+            span{
+                @include position(relative, 0, 0, 0, -15px);
+                font-size: 1.5rem;
+                padding: 6px;
+                margin: 0 8px;
+            }
+            .btn{
+                margin: 0;
+                padding: 7px 17.75px;
+            }
+            #btn-icon{
+                padding: 0;
+                font-size: 1.25rem;
+            }
+            .btn-see-all{
+                font-size: 1.5rem;
+            }
+        }
+        .flash-deals-product-container{
+            overflow-x: auto;
+
+            .products-deal{
+                padding-top: 20px;
+            }
+        }
+        .horizontal-scroll{
+            .btn-scroll{
+                display: none;
+            }
+        }
+    }
+}
+/*481 to 768px*/
+@include tablet-device(tablet-sm, tablet-md){
+    #flash-deals-section{
+        .flash-deals-container{
+            padding: 15px;
+
+            #flash-deals-header{
+                font-size: 3rem;
+                margin: 0 20px 0 8px;
+            }
+            #sale-ends{
+                font-size: 2.5rem;
+                padding-top: 0;
+            }
+            span{
+                font-size: 1.5rem;
+                padding: 6px;
+                margin: 0 8px;
+            }
+            .btn{
+                padding: 7px 17.75px;
+            }
+            #btn-icon{
+                padding: 0;
+                font-size: 1.75rem;
+            }
+            .btn-see-all{
+                font-size: 2rem;
+            }
+        }
+        .flash-deals-product-container{
+            overflow-x: auto;
+
+            .products-deal{
+                padding-top: 20px;
+            }
+        }
+        .horizontal-scroll{
+            .btn-scroll{
+                display: none;
+            }
+        }
+    }
+}
+/*769 to 1024px*/
+@include small-screens(screen-sm, screen-md){
+    #flash-deals-section{
+        .flash-deals-container{
+            padding: 15px;
+
+            #flash-deals-header{
+                font-size: 4rem;
+                margin: 0 20px 0 8px;
+            }
+            #sale-ends{
+                font-size: 3rem;
+                padding-top: 0;
+            }
+        }
+        .flash-deals-product-container{
+            overflow-x: auto;
+
+            .products-deal{
+                padding-top: 20px;
+            }
+        }
+        .horizontal-scroll{
+            .btn-scroll{
+                display: none;
+            }
+        }
+    }
+}

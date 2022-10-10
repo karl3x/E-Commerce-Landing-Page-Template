@@ -1,0 +1,8 @@
+@mixin customized-hr{
+    width: 100%;
+    border-top: 2px solid #929292;
+}
+@mixin footer-custom-hr{
+    width: 100%;
+    border-top: 1px solid #CCC;
+}
